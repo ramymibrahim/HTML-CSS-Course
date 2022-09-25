@@ -13,59 +13,61 @@
     <link href="./fonts/font-awesome/css/brands.css" rel="stylesheet" />
     <link href="./fonts/font-awesome/css/solid.css" rel="stylesheet" />
     <style>
-      .search-form input,
-      .search-form button,
-      .search-form-flex input,
-      .search-form-flex button {
-        font-size: 1rem;
-        padding: 6px 12px;
-        border-radius: 0;
-        outline: none;
-        border: 1px solid #ced4da;
-        background: transparent;
+      body {
+        background-color: #cecece;
       }
-
-      .search-form input:focus,
-      .search-form-flex input:focus {
-        border-color: #ffefb3;
+      * {
+        margin: 0;
+        padding: 0;
       }
-
-      .search-form button,
-      .search-form-flex button {
-        background: transparent;
-        color: #ffd333 !important;
-        border-left: none;
+      .categories {
+        max-width: 300px;
+        position: relative;
       }
-
-      .search-form input,
-      .search-form button {
-        display: block;
-        float: left;
-      }
-      .search-form::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-      .search-form input,
-      .search-form-flex input {
-        width: 400px;
-        max-width: 100%;
-      }
-      .search-form-flex {
+      .categories-select {
         display: flex;
+        justify-content: space-between;
+        background-color: #ffd333;
+        padding: 20px 10px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .categories-select:hover {
+        background-color: #ffc800;
+      }
+      .menu-list {
+        list-style: none;
+        color: #6c757d;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: 0.5s;
+      }
+      .menu-list li {
+        padding: 7px 5px;
+        border-bottom: 1px solid #f5f5f5;
+      }
+      .categories:hover .menu-list {
+        height: initial;
       }
     </style>
   </head>
   <body>
-    <form action="products.html" class="search-form">
-      <input placeholder="Search for products" />
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-    <br />
-    <form action="products.html" class="search-form-flex">
-      <input placeholder="Search for products" />
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
+    <div class="categories">
+      <div class="categories-select">
+        <div><i class="fa fa-bars"></i> Categories</div>
+        <div class="menu-arrow">
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+      <ul class="menu-list">
+        <li>Dresses</li>
+        <li>Shirts</li>
+        <li>Jeans</li>
+        <li>Swimwear</li>
+      </ul>
+    </div>
   </body>
 </html>

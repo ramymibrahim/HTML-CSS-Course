@@ -215,7 +215,6 @@ a {
   transform: rotate(10deg) scale(1.25);
 }
 .search-bar{
-  flex-grow: 1;
   text-align: center;
 }
 .search-form input,
