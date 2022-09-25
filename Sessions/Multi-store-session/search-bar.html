@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="./fonts/font-awesome/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="./fonts/font-awesome/css/brands.css" rel="stylesheet" />
+    <link href="./fonts/font-awesome/css/solid.css" rel="stylesheet" />
+    <style>
+      .search-form input,
+      .search-form button,
+      .search-form-flex input,
+      .search-form-flex button {
+        font-size: 1rem;
+        padding: 6px 12px;
+        border-radius: 0;
+        outline: none;
+        border: 1px solid #ced4da;
+        background: transparent;
+      }
+
+      .search-form input:focus,
+      .search-form-flex input:focus {
+        border-color: #ffefb3;
+      }
+
+      .search-form button,
+      .search-form-flex button {
+        background: transparent;
+        color: #ffd333 !important;
+        border-left: none;
+      }
+
+      .search-form input,
+      .search-form button {
+        display: block;
+        float: left;
+      }
+      .search-form::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .search-form input,
+      .search-form-flex input {
+        width: 400px;
+        max-width: 100%;
+      }
+      .search-form-flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="products.html" class="search-form">
+      <input placeholder="Search for products" />
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    <br />
+    <form action="products.html" class="search-form-flex">
+      <input placeholder="Search for products" />
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </body>
+</html>
